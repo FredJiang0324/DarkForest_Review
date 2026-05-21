@@ -1,0 +1,41 @@
+{
+  "available_after_exclusion_by_split": {
+    "dev": 133,
+    "private_test": 0,
+    "test": 0,
+    "train": 1310
+  },
+  "excluded_existing_sample_examples_by_split": {
+    "dev": 45,
+    "private_test": 0,
+    "test": 255,
+    "train": 0
+  },
+  "finqa_root": "data/FinQA",
+  "output_dir": "data/FinQA_Sample",
+  "output_files": {
+    "jsonl": "data/FinQA_Sample/finqa_text_only_calibration.jsonl",
+    "metadata": "data/FinQA_Sample/calibration_metadata.json"
+  },
+  "overlap_numeric_ids_with_sample": [],
+  "overlap_raw_ids_with_sample": [],
+  "prompt_policy": "Calibration prompts use the same strict text-only policy as finqa_text_only_sample.jsonl: original pre_text/post_text only; no table headers, cells, rows, table verbalizations, gold answers, or gold programs.",
+  "sample_count": 100,
+  "sample_data_excluded": "data/FinQA_Sample/finqa_text_only_sample.jsonl",
+  "sample_id_start": 300,
+  "sample_records_excluded": 300,
+  "seed": 1,
+  "selected_by_split": {
+    "dev": 100
+  },
+  "selection_notes": {
+    "dev": "sampled_100_of_133"
+  },
+  "target_size": 100,
+  "valid_text_only_examples_before_exclusion_by_split": {
+    "dev": 178,
+    "private_test": 0,
+    "test": 255,
+    "train": 1310
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "data_files_discovered": [
+    "data/FinQA/dataset/dev.json",
+    "data/FinQA/dataset/private_test.json",
+    "data/FinQA/dataset/test.json",
+    "data/FinQA/dataset/train.json"
+  ],
+  "diagnostics_by_split": {
+    "dev": {
+      "gold_program_uses_table_op": 35,
+      "gold_support_not_text_only": 640,
+      "missing_ann_text_rows": 20,
+      "non_numeric_gold_answer": 10,
+      "ok": 178
+    },
+    "private_test": {
+      "missing_gold_program": 919
+    },
+    "test": {
+      "gold_program_uses_table_op": 39,
+      "gold_support_not_text_only": 809,
+      "missing_ann_text_rows": 24,
+      "non_numeric_gold_answer": 20,
+      "ok": 255
+    },
+    "train": {
+      "gold_program_uses_table_op": 196,
+      "gold_support_not_text_only": 4497,
+      "missing_ann_text_rows": 123,
+      "no_usable_text_blocks": 1,
+      "non_numeric_gold_answer": 124,
+      "ok": 1310
+    }
+  },
+  "examples_by_split": {
+    "dev": 883,
+    "private_test": 919,
+    "test": 1147,
+    "train": 6251
+  },
+  "finqa_root": "data/FinQA",
+  "official_evaluator": {
+    "found": true,
+    "functions": [
+      "program_tokenization",
+      "eval_program",
+      "equal_program"
+    ],
+    "path": "data/FinQA/code/evaluate/evaluate.py"
+  },
+  "output_dir": "data/FinQA_Sample",
+  "output_files": {
+    "jsonl": "data/FinQA_Sample/finqa_text_only_sample.jsonl",
+    "metadata": "data/FinQA_Sample/metadata.json",
+    "readme": "data/FinQA_Sample/README.md"
+  },
+  "prompt_policy": "Prompts contain only original pre_text/post_text blocks from strict text-only support examples. Table evidence is excluded rather than verbalized; table rows, headers, cells, table_ori/table/model_input table strings, answers, programs, derivations, and label field names are not included in prompts.",
+  "sample_count": 300,
+  "scripts": {
+    "eval": "data/scripts/eval_finqa_metrics.py",
+    "prepare": "data/scripts/prepare_finqa_text_only_sample.py"
+  },
+  "seed": 0,
+  "selected_by_split": {
+    "dev": 45,
+    "test": 255
+  },
+  "selection_notes": {
+    "dev": "sampled_45_of_178",
+    "test": "included_all_255"
+  },
+  "split_priority": [
+    "test",
+    "dev",
+    "train"
+  ],
+  "target_size": 300,
+  "total_loaded_examples": 9200,
+  "valid_text_only_examples_by_split": {
+    "dev": 178,
+    "private_test": 0,
+    "test": 255,
+    "train": 1310
+  },
+  "valid_text_only_examples_total": 1743
+}
