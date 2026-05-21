@@ -1,6 +1,6 @@
 # DarkForest Review Artifact
 
-This branch contains the DarkForest implementation and the calibration/test data needed to inspect or rerun the paper's ours-only experiments. It intentionally excludes baseline implementations, generated logs, plots, ablation outputs, and machine-local paths.
+This branch contains the DarkForest implementation and the calibration/test data needed to inspect or rerun the paper's experiments.
 
 ## Contents
 
@@ -42,4 +42,4 @@ This branch includes only the data required by the ours-only runners:
 - FinQA: `data/FinQA_Sample/` plus the official evaluator file under `data/FinQA/code/evaluate/evaluate.py`
 - LegalBench: `data/LegalBench_Sample/`
 
-Generated files are written under `outputs/` by default and are ignored by git.
+Generated files are written under `outputs/` by default.
